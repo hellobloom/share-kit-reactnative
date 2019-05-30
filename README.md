@@ -54,7 +54,7 @@ npm run postinstall
 Check [demo](./demo) for complete example.
 
 ```tsx
-import { RequestButton, RequestData, Action } from "@pbteja-dev/share-kit-reactnative";
+import { RequestButton, RequestData, Action } from "@bloomprotocol/share-kit-reactnative";
 
 const requestData: RequestData = {
     action: Action.attestation,

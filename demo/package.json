@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@pbteja-dev/share-kit-reactnative": "0.0.2",
+    "@bloomprotocol/share-kit-reactnative": "^0.0.1",
     "@tradle/react-native-http": "^2.0.1",
     "browserify-zlib": "^0.1.4",
     "buffer": "^4.9.1",
