@@ -8,7 +8,8 @@ const style = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#F5FCFF',
+    padding: 20
 };
 
 const CenteredView = ({ children }) => (
