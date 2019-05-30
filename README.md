@@ -8,6 +8,7 @@ React Native wrapper for [Share Kit](https://github.com/hellobloom/share-kit#rea
   - [Installation](#installation)
   - [Usage](#usage)
   - [More](#more)
+  - [Storybook Demo](demo/README.md)
 
 ## Installation
 
