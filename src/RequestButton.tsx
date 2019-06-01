@@ -5,6 +5,8 @@ import {ImageBackground, Linking, TouchableOpacity, View, StyleSheet} from "reac
 import LinearGradient from 'react-native-linear-gradient';
 import {encode} from "base-64";
 
+const appendQuery = require('append-query');
+
 type RequestButtonProps = {
     requestData: RequestData,
     buttonCallbackUrl: string
@@ -17,6 +19,8 @@ const getLink = (data: RequestData, callbackUrl: string) =>
     `https://bloom.co/download?request=${encode(JSON.stringify(data))}&callback-url=${encodeURIComponent(
         callbackUrl
     )}`;
+
+const appendParams = (callbackUrl: string) => appendQuery(callbackUrl, 'share-kit-from=button');
 
 const styles = StyleSheet.create({
     linearGradient: {
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
 });
 
 export const RequestButton: React.FC<RequestButtonProps> = ({requestData, buttonCallbackUrl}) => (
-    <TouchableOpacity onPress={() => Linking.openURL(getLink(requestData, buttonCallbackUrl))}>
+    <TouchableOpacity onPress={() => Linking.openURL(getLink(requestData, appendParams(buttonCallbackUrl)))}>
         <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#7A7CF3', '#6262F6']} style={styles.linearGradient}>
             <ImageBackground source={{uri: backgroundPattern}} style={styles.imageBackground}>
                 <View style={{flex: 0, flexDirection: 'row'}}>
