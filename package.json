@@ -1,0 +1,40 @@
+{
+  "name": "@bloomprotocol/share-kit-reactnative",
+  "version": "0.0.1",
+  "description": "React Native wrapper for @bloomprotocol/share-kit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellobloom/share-kit-reactnative"
+  },
+  "author": "Mulili Nzuki",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run clean-example && node ./node_modules/.bin/tsc -p tsconfig.build.json && npm run copy-dist",
+    "clean": "rimraf dist",
+    "clean-example": "rimraf example/dist",
+    "copy-dist": "./node_modules/.bin/cpx \"dist/**\" example/dist/",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@bloomprotocol/share-kit": "^7.2.1",
+    "@types/base-64": "^0.1.3",
+    "@types/node": "^12.6.9",
+    "append-query": "^2.1.0",
+    "base-64": "^0.1.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-svg": "^9.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.19",
+    "@types/react-native": "^0.57.60",
+    "babel-loader": "^8.0.6",
+    "react": "16.8.6",
+    "react-native": "0.60.4",
+    "react-native-typescript-transformer": "^1.2.12",
+    "typescript": "^3.5.1"
+  }
+}
