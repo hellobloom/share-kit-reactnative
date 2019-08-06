@@ -21,7 +21,7 @@
     "clean": "npm run clean-dist && npm run clean-example",
     "clean-dist": "rimraf dist",
     "clean-example": "rimraf example/dist",
-    "copy-dist": "copyfiles \"dist/**\" example/dist/",
+    "copy-dist": "copyfiles \"dist/**\" example/",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test && npm run eslint",
     "eslint": "./bin/eslint"
