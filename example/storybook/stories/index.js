@@ -19,160 +19,27 @@ const buttonCallbackUrl = 'https://mysite.com/bloom-callback'
 
 storiesOf('RequestButton', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Large/Verify', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-      }}
-    />
-  ))
-  .add('Large/Log In', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'lg',
-        type: 'log-in',
-      }}
-    />
-  ))
-  .add('Large/Sign Up', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'lg',
-        type: 'sign-up',
-      }}
-    />
-  ))
-  .add('Large/Connect', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'lg',
-        type: 'connect',
-      }}
-    />
-  ))
-  .add('Medium/Verify', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'md',
-      }}
-    />
-  ))
-  .add('Medium/Log In', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'md',
-        type: 'log-in',
-      }}
-    />
-  ))
-  .add('Medium/Sign Up', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'md',
-        type: 'sign-up',
-      }}
-    />
-  ))
-  .add('Medium/Connect', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'md',
-        type: 'connect',
-      }}
-    />
-  ))
-  .add('Small/Circle', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'sm',
-        type: 'circle',
-      }}
-    />
-  ))
-  .add('Small/Squircle', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'sm',
-        type: 'squircle',
-      }}
-    />
-  ))
-  .add('Small/Square', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'sm',
-        type: 'square',
-      }}
-    />
-  ))
+  .add('Large/Verify', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} />)
+  .add('Large/Log In', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="lg" type="log-in" />)
+  .add('Large/Sign Up', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="lg" type="sign-up" />)
+  .add('Large/Connect', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="lg" type="connect" />)
+  .add('Large/Bloom', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="lg" type="bloom" />)
+  .add('Medium/Verify', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="md" />)
+  .add('Medium/Log In', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="md" type="log-in" />)
+  .add('Medium/Sign Up', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="md" type="sign-up" />)
+  .add('Medium/Connect', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="md" type="connect" />)
+  .add('Medium/Bloom', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="md" type="bloom" />)
+  .add('Small/Circle', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" type="circle" />)
+  .add('Small/Squircle', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" type="squircle" />)
+  .add('Small/Square', () => <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" type="square" />)
   .add('Small/Rounded Square', () => (
-    <RequestButton
-      requestData={requestData}
-      buttonOptions={{
-        callbackUrl: buttonCallbackUrl,
-        size: 'sm',
-        type: 'rounded-square',
-      }}
-    />
+    <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" type="rounded-square" />
   ))
   .add('Small/Inverted', () => (
     <React.Fragment>
-      <RequestButton
-        requestData={requestData}
-        buttonOptions={{
-          callbackUrl: buttonCallbackUrl,
-          size: 'sm',
-          invert: true,
-          type: 'circle',
-        }}
-      />
-      <RequestButton
-        requestData={requestData}
-        buttonOptions={{
-          callbackUrl: buttonCallbackUrl,
-          size: 'sm',
-          invert: true,
-          type: 'squircle',
-        }}
-      />
-      <RequestButton
-        requestData={requestData}
-        buttonOptions={{
-          callbackUrl: buttonCallbackUrl,
-          size: 'sm',
-          invert: true,
-          type: 'rounded-square',
-        }}
-      />
-      <RequestButton
-        requestData={requestData}
-        buttonOptions={{
-          callbackUrl: buttonCallbackUrl,
-          size: 'sm',
-          invert: true,
-          type: 'square',
-        }}
-      />
+      <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" invert type="circle" />
+      <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" invert type="squircle" />
+      <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" invert type="rounded-square" />
+      <RequestButton requestData={requestData} callbackUrl={buttonCallbackUrl} size="sm" invert type="square" />
     </React.Fragment>
   ))
