@@ -1,5 +1,7 @@
 ![Share Kit React Native](https://github.com/hellobloom/share-kit/raw/master/images/logo.png)
 
+**Important**: This repository is no longer maintained. It has been moved to the [attestations-es](https://github.com/hellobloom/attestations-es/) monorepo.
+
 # Share Kit React Native
 
 React Native wrapper for [Share Kit](https://github.com/hellobloom/share-kit#readme)
